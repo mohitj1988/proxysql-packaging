@@ -98,7 +98,7 @@ mkdir "$INSTALLDIR"
         make clean
         mkdir -p "$INSTALLDIR"
         make -j 4 build_deps
-        make -j 4
+        make -j 4 EXTRALINK=-lzstd
         mkdir -p $INSTALLDIR/usr/bin
         mkdir -p $INSTALLDIR/etc
         mkdir -p $INSTALLDIR/etc/init.d
